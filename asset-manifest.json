@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/mandarker-webpage/static/css/main.5074c72a.chunk.css",
-    "main.js": "/mandarker-webpage/static/js/main.262edbef.chunk.js",
-    "main.js.map": "/mandarker-webpage/static/js/main.262edbef.chunk.js.map",
-    "runtime-main.js": "/mandarker-webpage/static/js/runtime-main.390e80f2.js",
-    "runtime-main.js.map": "/mandarker-webpage/static/js/runtime-main.390e80f2.js.map",
-    "static/js/2.30181542.chunk.js": "/mandarker-webpage/static/js/2.30181542.chunk.js",
-    "static/js/2.30181542.chunk.js.map": "/mandarker-webpage/static/js/2.30181542.chunk.js.map",
-    "index.html": "/mandarker-webpage/index.html",
-    "precache-manifest.c8a5296514e3e6f709c0b09be7fbe363.js": "/mandarker-webpage/precache-manifest.c8a5296514e3e6f709c0b09be7fbe363.js",
-    "service-worker.js": "/mandarker-webpage/service-worker.js",
-    "static/css/main.5074c72a.chunk.css.map": "/mandarker-webpage/static/css/main.5074c72a.chunk.css.map",
-    "static/js/2.30181542.chunk.js.LICENSE.txt": "/mandarker-webpage/static/js/2.30181542.chunk.js.LICENSE.txt",
-    "static/media/Background Video.mp4": "/mandarker-webpage/static/media/Background Video.225974e3.mp4"
+    "main.css": "/static/css/main.5074c72a.chunk.css",
+    "main.js": "/static/js/main.6a8a9ffe.chunk.js",
+    "main.js.map": "/static/js/main.6a8a9ffe.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.04b2bbaf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.04b2bbaf.js.map",
+    "static/js/2.30181542.chunk.js": "/static/js/2.30181542.chunk.js",
+    "static/js/2.30181542.chunk.js.map": "/static/js/2.30181542.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.3fd0450b29037033106a978c654d6512.js": "/precache-manifest.3fd0450b29037033106a978c654d6512.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5074c72a.chunk.css.map": "/static/css/main.5074c72a.chunk.css.map",
+    "static/js/2.30181542.chunk.js.LICENSE.txt": "/static/js/2.30181542.chunk.js.LICENSE.txt",
+    "static/media/Background Video.mp4": "/static/media/Background Video.225974e3.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.390e80f2.js",
+    "static/js/runtime-main.04b2bbaf.js",
     "static/js/2.30181542.chunk.js",
     "static/css/main.5074c72a.chunk.css",
-    "static/js/main.262edbef.chunk.js"
+    "static/js/main.6a8a9ffe.chunk.js"
   ]
 }
