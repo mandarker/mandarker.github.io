@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* video css */
 .fullscreen-bg {
     position: fixed;
     top: 0;
@@ -28,4 +34,80 @@
     width: 300%;
     left: -100%;
   }
+}
+
+/* header css */
+/* with nav button*/
+.header_withButton {
+  display: flex;
+  background-color: black;
+  width: 100%;
+
+  box-shadow: 0 0 10px black;
+}
+
+.header_withButton div {
+  width: 10px;
+  flex-grow: 1;
+  visibility: hidden;
+}
+
+.header_withButton button {
+  width: 10px;
+  flex-grow: 1;
+  border: 0;
+  padding: 0;
+  padding-right: 20px;
+  outline: none;
+
+  font-size: 40px;
+  text-align: right;
+
+  background-color: black;
+  color: white;
+}
+
+.header_withButton h1 {
+  color: white;
+}
+
+.ul_withoutButtonPressed{
+  
+}
+
+/* without nav button */
+.header_noButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  background-color: black;
+  box-shadow: 0 0 10px black;
+}
+
+.header_noButton h1 {
+  padding-left: 30px;
+
+  color: white;
+}
+
+.header_noButton ul {
+  display: flex;
+  margin-left: auto;
+  padding-right: 30px;
+  list-style: none;
+}
+
+.header_noButton li {
+  margin: 0px 1vw;
+}
+
+.header_noButton button {
+  border: 0;
+
+  font-size: 20px;
+
+  background-color: black;
+  color: white;
 }
