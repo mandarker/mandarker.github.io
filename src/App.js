@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
-import backgroundVideo from './videos/Background Video.mp4';
+import file from './smicons/file.png';
+import twitter from './smicons/twitter.png';
+import linkedin from './smicons/linkedin.png';
+import resume from './Resume.pdf';
 
 class App extends React.Component {
   constructor() {
@@ -23,63 +26,31 @@ class App extends React.Component {
   update = () => {this.setState({height: window.innerHeight, width: window.innerWidth});};
 
   render() {
-    let navigation = <button onClick={() => this.setState({menuExpand: !this.state.menuExpand})}>&#8801;</button>;
-
-    // if screen width is large, use horizontal navigation instead of button
-    if (this.state.width > 700){
-      navigation =
-      <nav>
-        <ul>
-          <li><button onClick={() => this.setState({page: "About"})}>About</button></li>
-          <li><button onClick={() => this.setState({page: "Portfolio"})}>Portfolio</button></li>
-          <li><button onClick={() => this.setState({page: "Blog"})}>Blog</button></li>
-          <li><button onClick={() => this.setState({page: "Contact"})}>Contact</button></li>
-        </ul>
-      </nav>;
-    }
-
     let header =
-    <header>
-      <div className="header_withButton">
-        <div></div>
-        <h1>Spring Nguyen</h1>
-        {navigation}
+    <header className="header_wide">
+      <h1>Spring Nguyen</h1>
+      <div className="contactInfo_wide">
+        <a href={resume}><img src={file}></img></a>
+        <a href="https://twitter.com/realmandarker"><img src={twitter}></img></a>
+        <a href="https://www.linkedin.com/in/springn/"><img src={linkedin}></img></a>
       </div>
     </header>;
 
-    // if screen width is large, use different css
-    if (this.state.width > 700){
+    // if screen width is small, use different css
+    if (this.state.width < 700){
       header =
-      <header className="header_noButton">
+      <header className="header_narrow">
         <h1>Spring Nguyen</h1>
-        {navigation}
-      </header>;
-    }
-
-    if (this.state.width < 700 && this.state.menuExpand){
-      header =
-      <header>
-        <div className="header_withButton">
-          <div></div>
-          <h1>Spring Nguyen</h1>
-          {navigation}
+        <div className="contactInfo_narrow">
+          <a href={resume}><img src={file}></img></a>
+          <a href="https://twitter.com/realmandarker"><img src={twitter}></img></a>
+          <a href="https://www.linkedin.com/in/springn/"><img src={linkedin}></img></a>
         </div>
-        <ul className="ul_withButtonPressed">
-          <li><button onClick={() => this.setState({page: "About"})}>About</button></li>
-          <li><button onClick={() => this.setState({page: "Portfolio"})}>Portfolio</button></li>
-          <li><button onClick={() => this.setState({page: "Blog"})}>Blog</button></li>
-          <li><button onClick={() => this.setState({page: "Contact"})}>Contact</button></li>
-        </ul>;
       </header>;
     }
 
     return (
       <div>
-        <div className="fullscreen-bg">
-          <video autoPlay muted loop className="fullscreen-bg_video">
-            <source src={backgroundVideo} type="video/mp4"></source>
-          </video>
-        </div>
         {header}
       </div>
     );
