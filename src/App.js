@@ -4,6 +4,7 @@ import file from './smicons/file.png';
 import twitter from './smicons/twitter.png';
 import linkedin from './smicons/linkedin.png';
 import resume from './Resume.pdf';
+import previews from './previews';
 
 class App extends React.Component {
   constructor() {
@@ -30,7 +31,7 @@ class App extends React.Component {
     <header className="header_wide">
       <h1>Spring Nguyen</h1>
       <div className="contactInfo_wide">
-        <a href={resume}><img src={file}></img></a>
+        <a href={resume} title="Resume"><img src={file}></img></a>
         <a href="https://twitter.com/realmandarker"><img src={twitter}></img></a>
         <a href="https://www.linkedin.com/in/springn/"><img src={linkedin}></img></a>
       </div>
@@ -49,9 +50,27 @@ class App extends React.Component {
       </header>;
     }
 
+    let sampleGrid =
+    <div className="sampleContainer_wide">
+      {previews.map(({id, vidsrc, title, link}) =>
+        <div class="sample_wide"><a href={link}><video loop muted onMouseOver={event => event.target.play()} onMouseOut={event => {event.target.pause(); event.target.currentTime = 0;}} src={vidsrc}></video></a></div>)
+      }
+    </div>;
+
+    if (this.state.width < 700){
+      sampleGrid =
+      <div className="sampleContainer_narrow">
+        {previews.map(({id, vidsrc, title, link}) =>
+          <div class="sample_narrow"><a href={link}><video loop muted onMouseOver={event => event.target.play()} onMouseOut={event => {event.target.pause(); event.target.currentTime = 0;}} src={vidsrc}></video></a></div>)
+        }
+      </div>;
+    }
+
+
     return (
       <div>
         {header}
+        {sampleGrid}
       </div>
     );
   }

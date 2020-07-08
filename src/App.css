@@ -17,10 +17,6 @@
 
 .contactInfo_narrow img {
   width: 5vh;
-}
-
-.contactInfo_narrow img {
-  width: 8vh;
   filter: brightness(0%);
 }
 
@@ -38,18 +34,65 @@
   border-width: 0px;
   border-bottom-width: 2px;
 
-  border-bottom-color: black;
+  border-bottom-color: #9c9c9c;
 }
 
 .header_wide h1 {
+  font-family: 'Caladea';
+  
   padding-left: 30px;
 }
 
 .contactInfo_wide img {
-  width: 8vh;
+  width: 7vh;
   filter: brightness(0%);
+  transition: filter 0.25s;
 }
 
 .contactInfo_wide img:hover {
   filter: brightness(100%);
+}
+
+/* samples grid */
+/* wide screen */
+.sampleContainer_wide {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 2vh;
+
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  grid-row-gap: 2vh;
+  justify-content: center;
+}
+
+.sample_wide {
+  justify-self: center;
+}
+
+.sample_wide video{
+  width: 38vw;
+  box-shadow: 0 0 1px 1px black;
+}
+
+.sample_wide video:hover{
+  box-shadow: 0 0 5px 2px black;
+}
+
+/* narrow screen */
+.sampleContainer_narrow{
+  display: flex;
+  flex-direction: column;
+}
+
+.sample_narrow video{
+  margin: 10px 0;
+  width: 100%;
+
+  box-shadow: 0 0 1px 1px black;
+}
+
+.sample_narrow video:hover{
+  box-shadow: 0 0 5px 2px black;
 }
