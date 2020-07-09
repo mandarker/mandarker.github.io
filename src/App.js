@@ -6,8 +6,6 @@ import linkedin from './smicons/linkedin.png';
 import resume from './Resume.pdf';
 import previews from './previews';
 
-import image from './images/arrowshotbow.png';
-
 class App extends React.Component {
   constructor() {
     super();
@@ -52,8 +50,6 @@ class App extends React.Component {
       </header>;
     }
 
-    console.log(image);
-
     let sampleGrid =
     <div className="sampleContainer_wide">
       {previews.map(({id, vidsrc, title, link}) =>
@@ -65,7 +61,7 @@ class App extends React.Component {
       sampleGrid =
       <div className="sampleContainer_narrow">
         {previews.map(({id, vidsrc, title, link}) =>
-          <div class="sample_narrow"><a href={link}><video loop muted onMouseOver={event => event.target.play()} onMouseOut={event => {event.target.pause(); event.target.currentTime = 0;}} src={vidsrc}></video></a></div>)
+          <div class="sample_narrow"><a href={link}><video loop muted autoPlay src={vidsrc}></video></a></div>)
         }
       </div>;
     }

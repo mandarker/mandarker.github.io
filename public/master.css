@@ -81,6 +81,7 @@ body {
     margin-right: auto;
     width: 85vw;
 
+    line-height: 5vmin;
     font-size: 3.5vmin;
     font-family: 'Roboto';
   }
@@ -191,6 +192,7 @@ body {
     margin-right: auto;
     width: 650px;
 
+    line-height: 3vmin;
     font-size: 2vmin;
     font-family: 'Roboto';
   }
