@@ -6,6 +6,8 @@ import linkedin from './smicons/linkedin.png';
 import resume from './Resume.pdf';
 import previews from './previews';
 
+import image from './images/arrowshotbow.png';
+
 class App extends React.Component {
   constructor() {
     super();
@@ -49,6 +51,8 @@ class App extends React.Component {
         </div>
       </header>;
     }
+
+    console.log(image);
 
     let sampleGrid =
     <div className="sampleContainer_wide">
