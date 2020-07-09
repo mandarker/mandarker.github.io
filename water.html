@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spring Nguyen | Water Shader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caladea&family=Red+Hat+Display&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="master.css">
+  </head>
+  <body>
+    <div class="nav">
+      <h3>Spring Nguyen</h3>
+      <div class="socials">
+        <a href="https://twitter.com/realmandarker"><img src="./static/media/twitter.e18ebba4.png"></img></a>
+        <a href="https://www.linkedin.com/in/springn/"><img src="./static/media/linkedin.cbf63eb3.png"></img></a>
+      </div>
+      <a href="index.html"><h4>Home</h4></a>
+      <a href="pikachu.html"><h4>Pikachu Shader</h4></a>
+      <a href="voidblock.html"><h4>Void Block Shader</h4></a>
+      <a href="arrowshot.html"><h4>Arrow Shot</h4></a>
+    </div>
+    <div class="contents">
+      <h1>Water Shader</h1>
+      <video loop autoplay muted src="./static/media/water.0675d659.mp4"></video>
+      <h2>Basic water simulation on a plane using HLSL.</h2>
+      <p>The water was created from a heightmap, which I used to make both the vertex displacement and the surface normals.</p>
+      <p>Initially, the intention was to create realistic looking water using Gerstner waves, but I wanted to see how well using a single heightmap would turn out.</p>
+      <p>The version I made was moderately satisfying, but there are a few things I wish to improve about it.</p>
+      <p>One of these was the addition of sea foam. I had thought of using the maximums on the heightmap and adding noise to create some sort of sea foam, but the results of testing made it seem like a moving texture on top of the water.</p>
+      <img src="./static/media/waterbadfoam.2a317829.png"></img>
+      <h2>The "foam" is also visibly tiled.</h2>
+      <p>The maximums also do not account for the foam being distorted with the flow. It instead moves at the same pace as the water.</p>
+      <p>This is lack of distortion is apparent on the surface normals. Currently, the surface normals are set to move at a constant speed. However, water does not flow in this manner, so the result seems a little unnatural.</p>
+      <p>I will probably look for a way to solve both of these problems in the near future.</p>
+    </div>
+    <div class="empty"></div>
+  </body>
+</html>

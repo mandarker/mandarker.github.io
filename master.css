@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+
+  .nav h3 {
+    margin: 0;
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-family: 'Caladea';
+    font-size: 30px;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+  }
+
+  .socials img{
+    width: 40px;
+    transition: filter 0.25s;
+  }
+
+  .socials img:hover{
+    filter: brightness(50%);
+  }
+
+  .nav h4 {
+    margin: 0;
+
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Roboto';
+  }
+
+  .nav a {
+    text-decoration: none;
+  }
+
+  .nav a:visited{
+    color: inherit;
+  }
+
+  .nav a:hover{
+    text-decoration: underline;
+  }
+
+  .contents h1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 2px;
+  }
+
+  .contents video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+
+    box-shadow: 0 0 1px 1px;
+  }
+
+  .contents h2 {
+    text-align: center;
+
+    font-weight: normal;
+    font-style: italic;
+    font-size: 2.5vmin;
+  }
+
+  .contents p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85vw;
+
+    font-size: 3.5vmin;
+    font-family: 'Roboto';
+  }
+
+  .contents img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+
+    box-shadow: 0 0 1px 1px;
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav {
+    width: 10vw;
+    margin-right: 3vw;
+  }
+
+  .nav h3 {
+    margin: 0;
+    margin-top: 65px;
+
+    text-align: right;
+
+    font-family: 'Caladea';
+    font-size: 25px;
+  }
+
+  .nav h4 {
+    margin: 0;
+
+    text-align: right;
+    font-weight: normal;
+    font-family: 'Roboto';
+  }
+
+  .nav a {
+    text-decoration: none;
+  }
+
+  .nav a:visited{
+    color: inherit;
+  }
+
+  .nav a:hover{
+    text-decoration: underline;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-bottom: 5px;
+  }
+
+  .socials img{
+    width: 30px;
+    transition: filter 0.25s;
+  }
+
+  .socials img:hover{
+    filter: brightness(50%);
+  }
+
+  .empty {
+    width: 10vw;
+    margin-left: 3vw;
+  }
+
+  .contents h1 {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 2px;
+
+    font-family: 'Red Hat Display';
+  }
+
+  .contents video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+
+    box-shadow: 0 0 1px 1px;
+  }
+
+  .contents h2 {
+    text-align: center;
+
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.5vmin;
+  }
+
+  .contents p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+
+    font-size: 2vmin;
+    font-family: 'Roboto';
+  }
+
+  .contents img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+
+    box-shadow: 0 0 1px 1px;
+  }
+}
