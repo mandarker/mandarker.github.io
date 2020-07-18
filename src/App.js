@@ -50,21 +50,14 @@ class App extends React.Component {
       </header>;
     }
 
+    console.log(previews[0].vidsrc);
+
     let sampleGrid =
     <div className="sampleContainer_wide">
       {previews.map(({id, vidsrc, title, link}) =>
-        <div class="sample_wide"><a href={link}><video loop muted onMouseOver={event => event.target.play()} onMouseOut={event => {event.target.pause(); event.target.currentTime = 0;}} src={vidsrc}></video></a></div>)
+        <div class="sample_wide"><a href={link}><video loop muted autoPlay src={vidsrc}></video></a></div>)
       }
     </div>;
-
-    if (this.state.width < 700){
-      sampleGrid =
-      <div className="sampleContainer_narrow">
-        {previews.map(({id, vidsrc, title, link}) =>
-          <div class="sample_narrow"><a href={link}><video loop muted autoPlay src={vidsrc}></video></a></div>)
-        }
-      </div>;
-    }
 
 
     return (
