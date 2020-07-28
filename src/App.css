@@ -1,54 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
 
-
-/* header css */
-/* narrow screen */
-.header_narrow {
-  border-style: solid;
-  border-width: 0px;
-  border-bottom-width: 2px;
-
-  border-bottom-color: black;
+body{
+  margin: 0;
+  padding: 0;
 }
 
-.header_narrow > * {
-  display: flex;
-  justify-content: center;
+body *{
+  margin: 0;
+  padding: 0;
 }
 
-.header_narrow h1{
-  font-family: 'Caladea';
-}
+button {
+  border: none;
+  outline-style: none;
 
-.contactInfo_narrow img {
-  width: 5vh;
-  filter: brightness(0%);
-}
+  font: inherit;
+  background: none;
 
-.contactInfo_narrow img:hover {
-  filter: brightness(100%);
+  cursor: pointer;
 }
 
 /* wide screen */
-.header_wide {
+.main_wide {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+}
+
+.header_wide {
+  width: 13vw;
+  height: 100vh;
 
   border-style: solid;
-  border-width: 0px;
-  border-bottom-width: 2px;
+  border-width: 0;
+  border-right-width: 2px;
 
-  border-bottom-color: #9c9c9c;
+  box-shadow: 0 0 2px 0px;
+
+  background-color: #ededed;
+}
+
+.header_wide *{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+
+  text-align: right;
 }
 
 .header_wide h1 {
   font-family: 'Caladea';
+}
 
-  padding-left: 30px;
+.header_wide > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header_wide > a:visited {
+  color: inherit;
+}
+
+.header_wide h2 {
+  font-family: 'Red Hat Display';
+}
+
+.header_wide button{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.contactInfo_wide{
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .contactInfo_wide img {
-  width: 7vh;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  width: 50px;
   filter: brightness(0%);
   transition: filter 0.25s;
 }
@@ -57,46 +88,224 @@
   filter: brightness(100%);
 }
 
-/* samples grid */
-/* wide screen */
 .sampleContainer_wide {
+  width:87vw;
+  height:100vh;
+  overflow-y:scroll;
+
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
-  margin-top: 2vh;
-
-  display: grid;
-  grid-template-columns: 40vw 40vw;
-  grid-row-gap: 2vh;
-  justify-content: center;
 }
 
 .sample_wide {
-  justify-self: center;
-}
+  width: 95%;
+  height: 44vh;
 
-.sample_wide video{
-  width: 38vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+
+
   box-shadow: 0 0 1px 1px black;
 }
 
-.sample_wide video:hover{
+.sample_wide:hover{
   box-shadow: 0 0 5px 2px black;
 }
 
+.sample_wide button{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.sample_wide video{
+  height: 44vh;
+}
+
+.sample_wide_details{
+  margin: 3vw;
+}
+
+.sample_wide_details h2{
+  text-align: left;
+  margin-bottom: 1vw;
+
+  font-family: 'Red Hat Display';
+  font-size: 4vh;
+}
+
+.sample_wide_details h3{
+  text-align: left;
+  margin-bottom: 2vw;
+
+  font-weight: normal;
+  font-style: italic;
+}
+
+.sample_wide_details p{
+  text-align: left;
+
+  font-family: 'Roboto';
+  font-size: 2vh;
+}
+
+.content_wide {
+  height: 100vh;
+  width: 87vw;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom_nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.bottom_nav button{
+  width: 200px;
+
+
+}
+
+.bottom_nav_left *{
+  margin-bottom: 10px;
+
+  text-align: left;
+}
+
+.bottom_nav_right *{
+  margin-bottom: 10px;
+
+  text-align: right;
+}
+
 /* narrow screen */
+.header_narrow {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+
+  border-style: solid;
+  border-width: 0px;
+  border-bottom-width: 2px;
+
+  border-bottom-color: black;
+}
+
+.header_narrow h1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  font-family: 'Caladea';
+  color: white;
+}
+
+.header_narrow h2{
+  width: 50px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  text-align: center;
+
+  color: white;
+}
+
+.empty{
+  width: 50px;
+}
+
 .sampleContainer_narrow{
   display: flex;
   flex-direction: column;
 }
 
+.sample_narrow {
+  outline-style: none;
+  border-style: none;
+}
+
 .sample_narrow video{
-  margin: 10px 0;
-  width: 100%;
+  margin: 20px 0;
+  width: 90%;
 
   box-shadow: 0 0 1px 1px black;
 }
 
 .sample_narrow video:hover{
   box-shadow: 0 0 5px 2px black;
+}
+
+.expandedMenu {
+  position: absolute;
+
+  width: 250px;
+  height: 100vh;
+
+  border-style: solid;
+  border-width: 0;
+  border-right-width: 2px;
+
+  box-shadow: 0 0 2px 0px;
+
+  background-color: #ededed;
+  z-index: 1;
+}
+
+.expandedMenu button{
+  width: 100%;
+}
+
+.cross h3{
+  width: 50px;
+
+  margin-top: 5px;
+  font-size: 40px;
+
+  font-size:
+}
+
+.expandedMenu h2{
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 30px;
+
+  font-family: 'Red Hat Display';
+  font-size: 30px;
+  text-align: right;
+}
+
+.expandedMenu a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.expandedMenu a:visited {
+  color: inherit;
+}
+
+.contactInfo_narrow {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+
+}
+
+.contactInfo_narrow img {
+  width: 50px;
+  filter: brightness(0%);
+  transition: filter 0.25s;
+}
+
+.contactInfo_narrow img:hover {
+  filter: brightness(100%);
 }
