@@ -7,7 +7,7 @@ import Pikachu from './pages/Pikachu';
 import ArrowShot from './pages/Arrow Shot';
 import VoidBlock from './pages/Void Block';
 import Synthwave from './pages/Synthwave';
-import Colormancy1 from './pages/Colormancy1';
+import Colormancy from './pages/Colormancy1';
 
 import twitter from './smicons/twitter.png';
 import linkedin from './smicons/linkedin.png';
@@ -63,8 +63,8 @@ class App extends React.Component {
     let page;
     let nav;
 
-    if (this.state.page == 'Colormancy1'){
-      page = <Colormancy1 />;
+    if (this.state.page == 'Colormancy'){
+      page = <Colormancy />;
 
       nav =
       <div className="bottom_nav">

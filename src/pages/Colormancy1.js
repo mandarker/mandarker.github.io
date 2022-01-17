@@ -3,7 +3,7 @@ import './master.css';
 
 import colormancy1Preview from '../previewVideos/colormancy1.mp4';
 
-class Colormancy1 extends React.Component {
+class Colormancy extends React.Component {
   constructor() {
     super();
   }
@@ -11,7 +11,7 @@ class Colormancy1 extends React.Component {
   render() {
     return (
       <div className="page">
-        <h1>Colormancy VFX Part 1</h1>
+        <h1>Colormancy VFX</h1>
         <video loop autoPlay muted src={colormancy1Preview}></video>
         <h2>Making spell effects for an action packed painting game.</h2>
         <p>These are my VFX contributions to Colormancy, a game where players must cast spells to paint the environment.
@@ -28,4 +28,4 @@ class Colormancy1 extends React.Component {
   }
 }
 
-export default Colormancy1;
+export default Colormancy;
