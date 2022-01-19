@@ -7,7 +7,7 @@ import synthwavevid from './previewVideos/synthwave.mp4';
 import colormancy1 from './previewVideos/colormancy1.mp4';
 
 const previews = [
-  { id: 1, vidsrc: colormancy1, page: 'Colormancy1', title: 'Colormancy VFX Part 1', date: 'April 8, 2021', description: 'Making VFX for a spell-casting painting game.'},
+  { id: 1, vidsrc: colormancy1, page: 'Colormancy', title: 'Colormancy VFX', date: 'April 8, 2021', description: 'Making VFX for a spell-casting painting game.'},
   { id: 2, vidsrc: synthwavevid, page:'Synthwave', title: 'Synthwave Scene', date: 'July 25, 2020', description: 'Expanding into more custom post-processing effects.'},
   { id: 3, vidsrc: shieldvid, page:'Shield', title: 'Shield Shader', date: 'July 17, 2020', description: 'The first foray into post-processing and GrabPasses.'},
   { id: 4, vidsrc: watervid, page: 'Water', title: 'Water Shader', date: 'June 29, 2020', description: 'Basic water shader based on a heightmap.'},
