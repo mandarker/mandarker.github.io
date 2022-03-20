@@ -8,6 +8,7 @@ import ArrowShot from './pages/Arrow Shot';
 import VoidBlock from './pages/Void Block';
 import Synthwave from './pages/Synthwave';
 import Colormancy from './pages/Colormancy1';
+import CurveEditor from './pages/Curve Editor';
 
 import twitter from './smicons/twitter.png';
 import linkedin from './smicons/linkedin.png';
@@ -63,7 +64,22 @@ class App extends React.Component {
     let page;
     let nav;
 
-    if (this.state.page == 'Colormancy'){
+    if (this.state.page == 'Curve Editor'){
+      page = <CurveEditor />;
+
+      nav =
+      <div className="bottom_nav">
+        <button className="bottom_nav_left" onClick={(e) => this.changePage('Synthwave', e)}>
+          <h3>Previous:</h3>
+          <h3>Colormancy</h3>
+        </button>
+        <button className="bottom_nav_right">
+          <h3>Next:</h3>
+          <h3>TBD</h3>
+        </button>
+      </div>;
+    }
+    else if (this.state.page == 'Colormancy'){
       page = <Colormancy />;
 
       nav =
@@ -72,9 +88,9 @@ class App extends React.Component {
           <h3>Previous:</h3>
           <h3>Synthwave Scene</h3>
         </button>
-        <button className="bottom_nav_right">
+        <button className="bottom_nav_right" onClick={(e) => this.changePage('Curve Editor', e)}>
           <h3>Next:</h3>
-          <h3>To Be Determined</h3>
+          <h3>Curve Editor</h3>
         </button>
       </div>;
     }
