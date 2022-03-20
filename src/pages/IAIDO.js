@@ -5,7 +5,7 @@ import iaidoPreview from '../previewVideos/iaido.mp4';
 import iaidoOutline from '../images/iaidooutline.png';
 import iaidoComplete from '../images/iaidoComplete.png';
 
-class Colormancy extends React.Component {
+class IAIDO extends React.Component {
   constructor() {
     super();
   }
@@ -35,4 +35,4 @@ class Colormancy extends React.Component {
   }
 }
 
-export default Colormancy;
+export default IAIDO;

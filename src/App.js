@@ -9,6 +9,8 @@ import VoidBlock from './pages/Void Block';
 import Synthwave from './pages/Synthwave';
 import Colormancy from './pages/Colormancy1';
 import CurveEditor from './pages/Curve Editor';
+import IAIDO from './pages/IAIDO';
+import CurveEditorv2 from './pages/Curve Editor v2';
 
 import twitter from './smicons/twitter.png';
 import linkedin from './smicons/linkedin.png';
@@ -64,18 +66,48 @@ class App extends React.Component {
     let page;
     let nav;
 
-    if (this.state.page == 'Curve Editor'){
+    if (this.state.page == 'Curve Editor v2'){
+      page = <CurveEditorv2 />;
+
+      nav =
+      <div className="bottom_nav">
+        <button className="bottom_nav_left" onClick={(e) => this.changePage('IAIDO', e)}>
+          <h3>Previous:</h3>
+          <h3>IAIDO</h3>
+        </button>
+        <button className="bottom_nav_right">
+          <h3>Next:</h3>
+          <h3>TBD</h3>
+        </button>
+      </div>;
+    }
+    else if (this.state.page == 'IAIDO'){
+      page = <IAIDO />;
+
+      nav =
+      <div className="bottom_nav">
+        <button className="bottom_nav_left" onClick={(e) => this.changePage('Curve Editor', e)}>
+          <h3>Previous:</h3>
+          <h3>Curve Editor</h3>
+        </button>
+        <button className="bottom_nav_right" onClick={(e) => this.changePage('Curve Editor v2', e)}>
+          <h3>Next:</h3>
+          <h3>Curve Editor v2</h3>
+        </button>
+      </div>;
+    }
+    else if (this.state.page == 'Curve Editor'){
       page = <CurveEditor />;
 
       nav =
       <div className="bottom_nav">
         <button className="bottom_nav_left" onClick={(e) => this.changePage('Synthwave', e)}>
           <h3>Previous:</h3>
-          <h3>Colormancy</h3>
+          <h3>Colormancy VFX</h3>
         </button>
-        <button className="bottom_nav_right">
+        <button className="bottom_nav_right" onClick={(e) => this.changePage('IAIDO', e)}>
           <h3>Next:</h3>
-          <h3>TBD</h3>
+          <h3>IAIDO</h3>
         </button>
       </div>;
     }
@@ -103,9 +135,9 @@ class App extends React.Component {
           <h3>Previous:</h3>
           <h3>Shield Shader</h3>
         </button>
-        <button className="bottom_nav_right" onClick={(e) => this.changePage('Colormancy1', e)}>
+        <button className="bottom_nav_right" onClick={(e) => this.changePage('Colormancy', e)}>
           <h3>Next:</h3>
-          <h3>Colormancy VFX Part 1</h3>
+          <h3>Colormancy VFX</h3>
         </button>
       </div>;
     }
