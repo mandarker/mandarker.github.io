@@ -1,8 +1,8 @@
 import React from 'react';
-import './master.css';
+import '.././master.css';
 
-import waterPreview from '../previewVideos/water.mp4';
-import waterBadFoam from '../images/waterbadfoam.png';
+import waterPreview from '../../previewVideos/water.mp4';
+import waterBadFoam from '../../images/waterbadfoam.png';
 
 class Water extends React.Component {
   constructor() {

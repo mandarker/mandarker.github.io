@@ -1,14 +1,14 @@
 import React from 'react';
-import './master.css';
+import '.././master.css';
 
-import synthwavePreview from '../previewVideos/synthwave.mp4';
-import synthwaveJitter from '../videos/synthwavejitter.mp4';
-import synthwaveRoad from '../videos/synthwaveroad.mp4';
-import synthwaveNoShaders from '../images/synthwavenoshaders.png';
-import synthwaveGrid from '../images/synthwavegrid.png';
-import synthwaveSphere from '../images/synthwavesphere.png';
-import synthwaveBackground from '../images/synthwavebackground.png';
-import synthwavePostprocess from '../images/synthwavepostprocess.png';
+import synthwavePreview from '../../previewVideos/synthwave.mp4';
+import synthwaveJitter from '../../videos/synthwavejitter.mp4';
+import synthwaveRoad from '../../videos/synthwaveroad.mp4';
+import synthwaveNoShaders from '../../images/synthwavenoshaders.png';
+import synthwaveGrid from '../../images/synthwavegrid.png';
+import synthwaveSphere from '../../images/synthwavesphere.png';
+import synthwaveBackground from '../../images/synthwavebackground.png';
+import synthwavePostprocess from '../../images/synthwavepostprocess.png';
 
 class Synthwave extends React.Component {
   constructor() {

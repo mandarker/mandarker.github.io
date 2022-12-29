@@ -1,8 +1,8 @@
 import React from 'react';
-import './master.css';
+import '.././master.css';
 
-import arrowshotPreview from '../previewVideos/arrowshot.mp4';
-import arrowshotBow from '../images/arrowshotbow.png';
+import arrowshotPreview from '../../previewVideos/arrowshot.mp4';
+import arrowshotBow from '../../images/arrowshotbow.png';
 
 class ArrowShot extends React.Component {
   constructor() {

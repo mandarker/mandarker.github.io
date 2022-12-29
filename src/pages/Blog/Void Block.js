@@ -1,9 +1,9 @@
 import React from 'react';
-import './master.css';
+import '.././master.css';
 
-import voidblockPreview from '../previewVideos/voidblock.mp4';
-import voidblockGradient from '../images/voidblockgradient.png';
-import voidblockConversion from '../images/voidblockconversion.png';
+import voidblockPreview from '../../previewVideos/voidblock.mp4';
+import voidblockGradient from '../../images/voidblockgradient.png';
+import voidblockConversion from '../../images/voidblockconversion.png';
 
 class VoidBlock extends React.Component {
   constructor() {

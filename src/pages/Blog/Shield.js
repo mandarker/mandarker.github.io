@@ -1,10 +1,10 @@
 import React from 'react';
-import './master.css';
+import '.././master.css';
 
-import shieldPreview from '../previewVideos/shield.mp4';
-import shieldHighBloom from '../images/shieldhighbloom.png';
-import shieldBloomFar from '../images/shieldbloomfar.png';
-import shieldPerlinTex from '../images/shieldperlintex.png';
+import shieldPreview from '../../previewVideos/shield.mp4';
+import shieldHighBloom from '../../images/shieldhighbloom.png';
+import shieldBloomFar from '../../images/shieldbloomfar.png';
+import shieldPerlinTex from '../../images/shieldperlintex.png';
 
 class Shield extends React.Component {
   constructor() {

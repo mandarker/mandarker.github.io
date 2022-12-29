@@ -1,9 +1,9 @@
 import React from 'react';
-import './master.css';
+import '.././master.css';
 
-import pikachuPreview from '../previewVideos/pikachu.mp4';
-import pikachuFresnel from '../images/pikachufresnel.png';
-import pikachuGraph from '../images/pikachugraph.png';
+import pikachuPreview from '../../previewVideos/pikachu.mp4';
+import pikachuFresnel from '../../images/pikachufresnel.png';
+import pikachuGraph from '../../images/pikachugraph.png';
 
 class Pikachu extends React.Component {
   constructor() {

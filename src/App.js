@@ -1,21 +1,14 @@
 import React from 'react';
 import './App.css';
 
-import Shield from './pages/Shield';
-import Water from './pages/Water';
-import Pikachu from './pages/Pikachu';
-import ArrowShot from './pages/Arrow Shot';
-import VoidBlock from './pages/Void Block';
-import Synthwave from './pages/Synthwave';
-import Colormancy from './pages/Colormancy1';
-import CurveEditor from './pages/Curve Editor';
-import IAIDO from './pages/IAIDO';
-import CurveEditorv2 from './pages/Curve Editor v2';
+import Home from './pages/Home'
+import Blog from './pages/Blog'
+import Portfolio from './pages/Portfolio'
+import About from './pages/About'
 
 import twitter from './smicons/twitter.png';
 import linkedin from './smicons/linkedin.png';
 import resume from './Resume.pdf';
-import previews from './previews';
 
 class App extends React.Component {
   constructor() {
@@ -52,11 +45,15 @@ class App extends React.Component {
   render() {
     let header =
     <header className="header_wide">
-      <h1>Spring Nguyen</h1>
-      <button onClick={(e) => this.changePage("Home", e)}><h2>Home</h2></button>
-      <a href={resume}><h2>Resume</h2></a>
-      <h2>Social Media</h2>
-      <div className="contactInfo_wide">
+      <div className="header_container">
+        <h1>Spring Nguyen |</h1>
+        <h4>Technical Artist and Software Engineer</h4>
+      </div>
+      <div className="header_container">
+        <button onClick={(e) => this.changePage("Home", e)}><h2>Home</h2></button>
+        <button onClick={(e) => this.changePage("Portfolio", e)}><h2>Portfolio</h2></button>
+        <button onClick={(e) => this.changePage("Blog", e)}><h2>Blog</h2></button>
+        <button onClick={(e) => this.changePage("About", e)}><h2>About</h2></button>
         <a href="https://twitter.com/realmandarker"><img src={twitter}></img></a>
         <a href="https://www.linkedin.com/in/springn/"><img src={linkedin}></img></a>
       </div>
@@ -66,153 +63,20 @@ class App extends React.Component {
     let page;
     let nav;
 
-    if (this.state.page == 'Curve Editor v2'){
-      page = <CurveEditorv2 />;
-
-      nav =
-      <div className="bottom_nav">
-        <button className="bottom_nav_left" onClick={(e) => this.changePage('IAIDO', e)}>
-          <h3>Previous:</h3>
-          <h3>IAIDO</h3>
-        </button>
-        <button className="bottom_nav_right">
-          <h3>Next:</h3>
-          <h3>TBD</h3>
-        </button>
-      </div>;
-    }
-    else if (this.state.page == 'IAIDO'){
-      page = <IAIDO />;
-
-      nav =
-      <div className="bottom_nav">
-        <button className="bottom_nav_left" onClick={(e) => this.changePage('Curve Editor', e)}>
-          <h3>Previous:</h3>
-          <h3>Curve Editor</h3>
-        </button>
-        <button className="bottom_nav_right" onClick={(e) => this.changePage('Curve Editor v2', e)}>
-          <h3>Next:</h3>
-          <h3>Curve Editor v2</h3>
-        </button>
-      </div>;
-    }
-    else if (this.state.page == 'Curve Editor'){
-      page = <CurveEditor />;
-
-      nav =
-      <div className="bottom_nav">
-        <button className="bottom_nav_left" onClick={(e) => this.changePage('Synthwave', e)}>
-          <h3>Previous:</h3>
-          <h3>Colormancy VFX</h3>
-        </button>
-        <button className="bottom_nav_right" onClick={(e) => this.changePage('IAIDO', e)}>
-          <h3>Next:</h3>
-          <h3>IAIDO</h3>
-        </button>
-      </div>;
-    }
-    else if (this.state.page == 'Colormancy'){
-      page = <Colormancy />;
-
-      nav =
-      <div className="bottom_nav">
-        <button className="bottom_nav_left" onClick={(e) => this.changePage('Synthwave', e)}>
-          <h3>Previous:</h3>
-          <h3>Synthwave Scene</h3>
-        </button>
-        <button className="bottom_nav_right" onClick={(e) => this.changePage('Curve Editor', e)}>
-          <h3>Next:</h3>
-          <h3>Curve Editor</h3>
-        </button>
-      </div>;
-    }
-    else if (this.state.page == 'Synthwave'){
-      page = <Synthwave />;
-
-      nav =
-      <div className="bottom_nav">
-        <button className="bottom_nav_left" onClick={(e) => this.changePage('Shield', e)}>
-          <h3>Previous:</h3>
-          <h3>Shield Shader</h3>
-        </button>
-        <button className="bottom_nav_right" onClick={(e) => this.changePage('Colormancy', e)}>
-          <h3>Next:</h3>
-          <h3>Colormancy VFX</h3>
-        </button>
-      </div>;
-    }
-    else if (this.state.page == 'Shield'){
-      page = <Shield />;
-
-      nav =
-      <div className="bottom_nav">
-        <button className="bottom_nav_left" onClick={(e) => this.changePage('Water', e)}>
-          <h3>Previous:</h3>
-          <h3>Water Shader</h3>
-        </button>
-        <button className="bottom_nav_right" onClick={(e) => this.changePage('Synthwave', e)}>
-          <h3>Next:</h3>
-          <h3>Synthwave Scene</h3>
-        </button>
-      </div>;
-    }
-    else if (this.state.page == 'Water'){
-      page = <Water />;
-
-      nav =
-      <div className="bottom_nav">
-        <button className="bottom_nav_left" onClick={(e) => this.changePage('Pikachu', e)}>
-          <h3>Previous:</h3>
-          <h3>Pikachu Shader</h3>
-        </button>
-        <button className="bottom_nav_right" onClick={(e) => this.changePage('Shield', e)}>
-          <h3>Next:</h3>
-          <h3>Shield Shader</h3>
-        </button>
-      </div>;
-    }
-    else if (this.state.page == 'Pikachu'){
-      page = <Pikachu />;
-
-      nav =
-      <div className="bottom_nav">
-        <button className="bottom_nav_left" onClick={(e) => this.changePage('Arrow Shot', e)}>
-          <h3>Previous:</h3>
-          <h3>Arrow Shot Scene</h3>
-        </button>
-        <button className="bottom_nav_right" onClick={(e) => this.changePage('Water', e)}>
-          <h3>Next:</h3>
-          <h3>Water Shader</h3>
-        </button>
-      </div>;
-    }
-    else if (this.state.page == 'Arrow Shot'){
-      page = <ArrowShot />;
-
-      nav =
-      <div className="bottom_nav">
-        <button className="bottom_nav_left" onClick={(e) => this.changePage('Void Block', e)}>
-          <h3>Previous:</h3>
-          <h3>Void Block Shader</h3>
-        </button>
-        <button className="bottom_nav_right" onClick={(e) => this.changePage('Pikachu', e)}>
-          <h3>Next:</h3>
-          <h3>Pokemon Mystery Dungeon Shader</h3>
-        </button>
-      </div>;
-    }
-    else if (this.state.page == 'Void Block'){
-      page = <VoidBlock />;
-
-      nav =
-      <div className="bottom_nav">
-        <button className="bottom_nav_left">
-        </button>
-        <button className="bottom_nav_right" onClick={(e) => this.changePage('Arrow Shot', e)}>
-          <h3>Next:</h3>
-          <h3>Arrow Shot Scene</h3>
-        </button>
-      </div>;
+    switch (this.state.page)
+    {
+      case 'Home':
+        page = <Home />;
+        break;
+      case 'Portfolio':
+        page = <Portfolio />;
+        break;
+      case 'Blog':
+        page = <Blog />;
+        break;
+      case 'About':
+        page = <About changePage = {this.changePage}/>;
+        break;
     }
 
     content =
@@ -221,27 +85,8 @@ class App extends React.Component {
       {nav}
     </div>;
 
-    if (this.state.page == 'Home'){
-      content =
-      <div className="sampleContainer_wide" ref={this.test}>
-        {previews.map(({id, vidsrc, page, title, date, description}) =>
-
-          <div className="sample_wide">
-            <button onClick={(e) => this.changePage(page, e)}>
-              <video loop muted autoPlay src={vidsrc}></video>
-              <div className= "sample_wide_details">
-                <h2>{title}</h2>
-                <h3>{date}</h3>
-                <p>{description}</p>
-              </div>
-            </button>
-          </div>)
-        }
-      </div>;
-    }
-
     let main =
-      <div className="main_wide">
+      <div>
         {header}
         {content}
       </div>;
@@ -260,18 +105,6 @@ class App extends React.Component {
         <h1>Spring Nguyen</h1>
         <div className="empty"></div>
       </header>;
-
-      if (this.state.page == 'Home'){
-        content =
-        <div className="sampleContainer_narrow" ref={this.test}>
-          {previews.map(({id, vidsrc, page}) =>
-              <button className="sample_narrow" onClick={(e) => this.changePage(page, e)}>
-                <video loop muted autoPlay src={vidsrc}></video>
-              </button>
-            )
-          }
-        </div>;
-      }
 
       let expandedMenu;
 
