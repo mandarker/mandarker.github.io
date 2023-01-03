@@ -1,114 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
 body {
   margin: 0;
   padding: 0;
 }
 
-.page *{
-  margin-top: 20px;
-  margin-bottom: 20px;
+/*#region landing*/
+.landing {
+  height: 100vh;
+  background-color: black;
 }
 
-.page h1 {
-  width: 80%;
+.landing video {
+  height: 100vh;
+  width: 100vw;
+
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  object-fit: cover;
+}
+
+.landing_text {
+  position: relative;
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0.8);
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+  bottom: 75vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing_text h1 {
+  font-family: 'Caladea';
+  font-size: 4vmax;
+
+  margin-bottom: 20px;
+  padding-bottom: 2vmin;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+}
+
+.landing_text h2 {
+  font-family: 'Caladea';
+  font-size: 1.5vmax;
+  margin-bottom: 60px;
+}
+
+.landing_text p {
+  font-family: 'Roboto';
+  font-size: 1.5vmax;
+  margin-bottom: 60px;
+}
+
+.landing_text button{
+  font-family: 'Roboto';
+  color: #787878;
+
+  transition-property: all; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.landing_text button:hover{
+  color: white;
+}
+/*#endregion landing*/
+
+.portfolio {
+  height: 100vh;
+  background-color: #294291;
+}
+
+.portfolio h1 {
+  position: relative;
+  top: 5vh;
+  width: 100vw;
+
+  text-align: center;
+
+  font-family:'Caladea';
+  color:white;
+}
+
+.portfolioContainer {
+  height: 80vh;
+  width: 90vw;
+  
+  margin-top: 8vh;
   margin-left: auto;
   margin-right: auto;
 
-  border-style: solid;
-  border-width: 0;
-  border-bottom-width: 2px;
+  display: flex;
+}
+
+.portfolioBlock {
+  width: 30vw;
+
+  margin-right: 1vw;
+  margin-left: 1vw;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+  box-shadow: 1px 1px 10px black;
+  
+  background-color: #6785e7;
+}
+
+.portfolioBlock video {
+  width: 100%;
+}
+
+.portfolioText {
+  width: 80%;
+
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolioText h1{
+  position:static;
+  top: 0;
+  width: auto;
+
+  margin-bottom: 5%;
+
+  text-align: center;
 
   font-family: 'Red Hat Display';
 }
 
-.page h2 {
-  text-align: center;
+.portfolio p {
+  font-size: 1vmax;
 
-  font-weight: normal;
-  font-style: italic;
-  font-size: 2vmin;
+  color: white;
 }
 
-.page p {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
 
+
+/*#region about*/
+.about {
+  height: 100vh;
+
+  padding-left: 5vw;
+  padding-right: 5vw;
+
+  background-color: #030e30;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about img {
+  height: 50vh;
+  width: 50vh;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about_text h1{
+  font-family: 'Caladea';
+}
+
+.about_text p, .about_text h1 {
+  margin-bottom: 20px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+
+  color:white;
+}
+
+.about_text p {
   line-height: 3vmin;
   font-size: 2vmin;
   font-family: 'Roboto';
 }
-
-@media (min-width: 960px) {
-  .page video {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 700px;
-
-    box-shadow: 0 0 1px 1px;
-  }
-
-  .page iframe{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 700px;
-    height: calc(700px * 9 / 16);
-
-    box-shadow: 0 0 1px 1px;
-  }
-
-  .page img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 700px;
-
-    box-shadow: 0 0 1px 1px;
-  }
-}
-
-@media (max-width: 960px){
-  .page video {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80vw;
-
-    box-shadow: 0 0 1px 1px;
-  }
-
-  .page img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80vw;
-
-    box-shadow: 0 0 1px 1px;
-  }
-
-  .page iframe{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80vw;
-    height: calc(80vw * 9 / 16);
-
-    box-shadow: 0 0 1px 1px;
-  }
-
-  .page p {
-    width: 75vw;
-
-    line-height: 4vmin;
-    font-size: 2.5vmin;
-  }
-
-  .page h2 {
-    text-align: center;
-
-    font-weight: normal;
-    font-style: italic;
-    font-size: 2.5vmin;
-  }
-}
+/*#endregion about*/

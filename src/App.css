@@ -3,7 +3,6 @@
 body{
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 body *{
@@ -25,16 +24,38 @@ button :hover{
   text-decoration: underline;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
 /* wide screen */
 .header_wide {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: black;
+  background-color: #00071c;
+
+  z-index: 1;
 
   border-width: 0px;
 
   min-height: 60px;
+  width: 100vw;
+
+  transition-property: all; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.header_wide_down{
+  display: block;
+  line-height:0;
+  height: 0;
+  overflow: hidden;
 }
 
 .header_wide * {
@@ -61,135 +82,5 @@ button :hover{
 }
 
 .content_wide {
-  padding-top: 60px;
-  height: 100%;
-  width: 100%;
-  overflow-y: scroll;
-
-  display: flex;
-  flex-direction: column;
-}
-
-
-
-/* narrow screen */
-.header_narrow {
-  display: flex;
-  justify-content: space-between;
-  background-color: black;
-
-  border-style: solid;
-  border-width: 0px;
-  border-bottom-width: 2px;
-
-  border-bottom-color: black;
-}
-
-.header_narrow h1{
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-  font-family: 'Caladea';
-  color: white;
-}
-
-.header_narrow h2{
-  width: 50px;
-
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-  text-align: center;
-
-  color: white;
-}
-
-.empty{
-  width: 50px;
-}
-
-.sampleContainer_narrow{
-  display: flex;
-  flex-direction: column;
-}
-
-.sample_narrow {
-  outline-style: none;
-  border-style: none;
-}
-
-.sample_narrow video{
-  margin: 20px 0;
-  width: 90%;
-
-  box-shadow: 0 0 1px 1px black;
-}
-
-.sample_narrow video:hover{
-  box-shadow: 0 0 5px 2px black;
-}
-
-.expandedMenu {
-  position: absolute;
-
-  width: 250px;
-  height: 100vh;
-
-  border-style: solid;
-  border-width: 0;
-  border-right-width: 2px;
-
-  box-shadow: 0 0 2px 0px;
-
-  background-color: #ededed;
-  z-index: 1;
-}
-
-.expandedMenu button{
-  width: 100%;
-}
-
-.cross h3{
-  width: 50px;
-
-  margin-top: 5px;
-  font-size: 40px;
-
-  font-size: 30px;
-}
-
-.expandedMenu h2{
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: 30px;
-
-  font-family: 'Red Hat Display';
-  font-size: 30px;
-  text-align: right;
-}
-
-.expandedMenu a{
-  text-decoration: none;
-  color: inherit;
-}
-
-.expandedMenu a:visited {
-  color: inherit;
-}
-
-.contactInfo_narrow {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 30px;
-
-}
-
-.contactInfo_narrow img {
-  width: 50px;
-  filter: brightness(0%);
-  transition: filter 0.25s;
-}
-
-.contactInfo_narrow img:hover {
-  filter: brightness(100%);
+  overflow: hidden;
 }
