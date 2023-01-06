@@ -22,7 +22,7 @@ class Home extends React.Component {
     return (
       <div className="page">
         <div className="landing" ref={this.props.refList.homeRef}>
-          <video src={homeVideo} autoPlay loop muted preload='metadata'></video>
+          <video src={homeVideo} autoPlay loop muted type="video/mp4"></video>
           <div className="landing_text">
             <h1>Spring Nguyen</h1>
             <h2>Technical Artist and Software Engineer</h2>
