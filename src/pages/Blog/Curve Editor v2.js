@@ -1,8 +1,8 @@
 import React from 'react';
 import '.././master.css';
 
-import curveEditorv2 from '../../previewVideos/curveeditorv2.mp4';
-import curveEditorv2image from '../../images/curveeditorv2.png';
+import curveEditorv2 from '../../videos/blogVideos/curveeditorv2.mp4';
+import curveEditorv2image from '../../images/blogImages/curveeditorv2.png';
 
 class CurveEditorv2 extends React.Component {
   constructor() {

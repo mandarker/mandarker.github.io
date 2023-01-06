@@ -1,9 +1,9 @@
 import React from 'react';
 import '.././master.css';
 
-import iaidoPreview from '../../previewVideos/iaido.mp4';
-import iaidoOutline from '../../images/iaidooutline.png';
-import iaidoComplete from '../../images/iaidoComplete.png';
+import iaidoPreview from '../../videos/blogVideos/iaido.mp4';
+import iaidoOutline from '../../images/blogImages/iaidooutline.png';
+import iaidoComplete from '../../images/blogImages/iaidoComplete.png';
 
 class IAIDO extends React.Component {
   constructor() {

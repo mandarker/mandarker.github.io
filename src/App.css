@@ -76,6 +76,10 @@ button :hover{
   height: auto;
 }
 
+.header_wide a{
+  text-decoration: none;
+}
+
 .header_container {
   display: flex;
   align-items: center;
@@ -83,4 +87,60 @@ button :hover{
 
 .content_wide {
   overflow: hidden;
+}
+
+.header_blog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00071c;
+
+  z-index: 1;
+
+  border-width: 0px;
+
+  min-height: 60px;
+  width: 100vw;
+
+  transition-property: all; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.header_blog * {
+  font-family: 'Caladea';
+  color: white;
+
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.header_blog h4 {
+  margin-left: 0em;
+  color: #c4c4c4;
+}
+
+.header_blog img{
+  width: 40px;
+  height: auto;
+}
+
+.header_blog a{
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 1000px) {
+  .header_wide h1 {
+    font-size: 20px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .header_wide{
+    /*The lazy way out.*/
+    z-index: -1;
+  }
 }

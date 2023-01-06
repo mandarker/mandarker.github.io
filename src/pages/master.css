@@ -81,9 +81,10 @@ body {
 }
 /*#endregion landing*/
 
+/*#region portfolio*/
 .portfolio {
-  height: 100vh;
-  background-color: #294291;
+  height: 140vh;
+  background-color: white;
 }
 
 .portfolio h1 {
@@ -94,7 +95,8 @@ body {
   text-align: center;
 
   font-family:'Caladea';
-  color:white;
+  color:black;
+  text-decoration: underline;
 }
 
 .portfolioContainer {
@@ -106,30 +108,51 @@ body {
   margin-right: auto;
 
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .portfolioBlock {
-  width: 30vw;
+  width: 43vw;
+  height: 38vh;
 
   margin-right: 1vw;
   margin-left: 1vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 
   border-radius: 20px;
 
   overflow: hidden;
   box-shadow: 1px 1px 10px black;
   
-  background-color: #6785e7;
+  display: flex;
+
+  background-color: #142a6e;
 }
 
 .portfolioBlock video {
-  width: 100%;
+  width: 65%;
+  height: 100%;
+
+  margin-bottom: 0;
+
+  object-fit: cover;
+}
+
+.portfolioContent {
+  height: 100%;
+  width: 35%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .portfolioText {
   width: 80%;
 
-  margin-top: 5%;
+  margin-top: 8%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -139,20 +162,79 @@ body {
   top: 0;
   width: auto;
 
-  margin-bottom: 5%;
+  color:white;
+
+  margin-bottom: 10%;
 
   text-align: center;
+  text-decoration: underline;
+  font-size: 1.4vmax;
 
   font-family: 'Red Hat Display';
 }
 
-.portfolio p {
-  font-size: 1vmax;
+.portfolioText p {
+  font-size: 1.1vmax;
 
   color: white;
+
+  font-family: 'Roboto';
 }
 
+.portfolioLinks {
+  width: 90%;
 
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolioLinks img{
+  margin-left: 0.1em;
+  height: 0.7em;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(300deg) brightness(104%) contrast(102%);
+
+  transition-property: all; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.portfolioContent a{
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8%;
+}
+
+.portfolioContent button{
+  border-radius: 10px;
+  
+  height: 50px;
+  width: 100%;
+
+  background-color: #4369e6;
+  color: white;
+
+  text-align: center;
+  font-family: 'Caladea';
+  font-size: 1vmax;
+
+  transition-property: all; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.portfolioContent button:hover{
+  background-color: white;
+  color: #4369e6;
+}
+
+.portfolioLinks button:hover img{
+  filter: invert(32%) sepia(78%) saturate(1552%) hue-rotate(212deg) brightness(95%) contrast(89%);
+}
+/*#endregion portfolio*/
 
 /*#region about*/
 .about {
@@ -161,7 +243,7 @@ body {
   padding-left: 5vw;
   padding-right: 5vw;
 
-  background-color: #030e30;
+  background-color: #142a6e;
 
   display: flex;
   justify-content: center;
@@ -177,6 +259,7 @@ body {
 
 .about_text h1{
   font-family: 'Caladea';
+  text-decoration: underline;
 }
 
 .about_text p, .about_text h1 {
@@ -192,4 +275,220 @@ body {
   font-size: 2vmin;
   font-family: 'Roboto';
 }
+
+.about_text a {
+  text-decoration: none;
+  color: #787878;
+
+  transition-property: all; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.about_text a:hover{
+  text-decoration: underline;
+  color:white;
+}
+
+.about_resume {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
+
+.about_resume img{
+  margin-left: 0.5em;
+  height: 0.7em;
+  width: auto;
+  
+  object-fit: none;
+  border-radius: 0;
+
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(300deg) brightness(104%) contrast(102%);
+
+  transition-property: all; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.about_resume button{
+  border-radius: 10px;
+  
+  height: 50px;
+  width: 150px;
+
+  background-color: #4369e6;
+  color: white;
+
+  text-align: center;
+  font-family: 'Caladea';
+  font-size: 1vmax;
+
+  transition-property: all; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.about_resume button:hover{
+  background-color: white;
+  color: #4369e6;
+}
+
+.about_resume button:hover img{
+  filter: invert(32%) sepia(78%) saturate(1552%) hue-rotate(212deg) brightness(95%) contrast(89%);
+}
 /*#endregion about*/
+
+@media (max-width: 1000px) {
+  .landing_text {
+    bottom: 85vh;
+  }
+
+  .landing_text h1 {
+    font-size: 8vmax;
+  }
+
+  .landing_text h2 {
+    font-size: 3vmax;
+  }
+  
+  .landing_text p {
+    width: 80%;
+    font-size: 3vmax;
+    margin-bottom: 60px;
+  }
+  
+  .landing_text button{
+    font-family: 'Roboto';
+    color: #787878;
+  
+    transition-property: all; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+  }
+  
+  .portfolio {
+    height: 230vh;
+  }
+  
+  .portfolioBlock {
+    width: 100%;
+  }
+  
+  .portfolioText h1{
+    font-size: 3vmax;
+  }
+  
+  .portfolioText p {
+    font-size: 2vmax;
+  }
+  
+  .portfolioContent button{
+    font-size: 1.6vmax;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+  
+  .about img {
+    height: 30vw;
+    width: 30vw;
+    margin-bottom: 5vh;
+  }
+  
+  .about_text h1{
+    text-align: center;
+  }
+  
+  .about_text a {
+    text-decoration: none;
+    color: #787878;
+  }
+  
+  .about_resume {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about_resume a {
+    height: 6vmin;
+  }
+
+  .about_resume button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vmax;
+  }
+  
+  .about_resume img{
+    margin-bottom: 0;
+    height: 0.7em;
+    width: auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .portfolio {
+    height: 450vh;
+  }
+  
+  .portfolioBlock {
+    width: 100%;
+    height: 80vh;
+
+    flex-direction: column;
+  }
+  
+  .portfolioBlock video {
+    width: 100%;
+    height: auto;
+  }
+
+  .portfolioContent {
+    width: 100%;
+  }
+
+  .portfolioText h1{
+    font-size: 5vmax;
+  }
+  
+  .portfolioText p {
+    font-size: 3vmax;
+  }
+  
+  .portfolioContent button{
+    font-size: 3vmax;
+  }
+
+  .about {
+    height: 160vh;
+  }
+  
+  .about img {
+    height: 40vw;
+    width: 40vw;
+    margin-bottom: 5vh;
+  }
+
+  .about p {
+    font-size: 3vmax;
+    line-height: 4vmax;
+  }
+
+  .about_resume button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vmax;
+  }
+  
+  .about_resume img{
+    margin-bottom: 0;
+    height: 0.7em;
+    width: auto;
+  }
+}

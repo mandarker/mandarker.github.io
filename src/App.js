@@ -4,8 +4,8 @@ import './App.css';
 import Home from './pages/Home'
 import Blog from './pages/Blog'
 
-import twitter from './smicons/twitter.png';
-import linkedin from './smicons/linkedin.png';
+import twitter from './images/smicons/twitter.png';
+import linkedin from './images/smicons/linkedin.png';
 
 
 class App extends React.Component {
@@ -13,10 +13,6 @@ class App extends React.Component {
     super();
 
     this.state = {
-      height: 0,
-      width: 0,
-      scrollY: 0,
-      menuExpand: false,
       page: "Home"
     };
 
@@ -26,18 +22,9 @@ class App extends React.Component {
       aboutRef : React.createRef()
     };
 
-    window.addEventListener("resize", this.update);
-    window.addEventListener("scroll", this.update);
-
     this.changePage = this.changePage.bind(this);
     this.test = React.createRef();
   }
-
-  componentDidMount() {
-    this.update();
-  }
-
-  update = () => {this.setState({height: window.innerHeight, width: window.innerWidth, scrollY: window.scrollY});};
 
   changePage(p, e) {
     e.preventDefault();
@@ -57,31 +44,83 @@ class App extends React.Component {
           el = this.refList.aboutRef;
           break;
       }
-      
-      window.scrollTo({
-        behavior: "smooth",
-        left: 0,
-        top: el.current.offsetTop - 60
-      });
+
+      if (el.current == null){
+        window.scrollTo({
+          behavior: "smooth",
+          left: 0,
+          top: 0
+        });
+      }
+      else{
+        window.scrollTo({
+          behavior: "smooth",
+          left: 0,
+          top: el.current.offsetTop - 60
+        });
+      }
     }
   }
 
   render() {
-    let header =
-    <header className={this.state.scrollY != 0 || this.state.page == "Blog" ? "header_wide" : "header_wide_down"}>
+    let header;
+    let pageDirectories;
+
+    if (this.state.page == "Blog"){
+      pageDirectories =
       <div className="header_container">
-        <h1>Spring Nguyen |</h1>
-        <h4>Technical Artist and Software Engineer</h4>
-      </div>
+        <button onClick={(e) => this.changePage("Home", e)}><h2>Home</h2></button>
+        <a href="https://twitter.com/realmandarker"><img src={twitter}></img></a>
+        <a href="https://www.linkedin.com/in/springn/"><img src={linkedin}></img></a>
+      </div>;
+    }
+    else{
+      pageDirectories =
       <div className="header_container">
         <button onClick={(e) => this.changePage("Home", e)}><h2>Home</h2></button>
         <button onClick={(e) => this.changePage("Portfolio", e)}><h2>Portfolio</h2></button>
         <button onClick={(e) => this.changePage("About", e)}><h2>About</h2></button>
-        <button><a href='blogpages/blogmain.html'><h2>Blog</h2></a></button>
+        <button onClick={(e) => this.changePage("Blog", e)}><h2>Blog</h2></button>
         <a href="https://twitter.com/realmandarker"><img src={twitter}></img></a>
         <a href="https://www.linkedin.com/in/springn/"><img src={linkedin}></img></a>
+      </div>;
+    }
+
+    let headerClass;
+
+    if (this.state.page == "Blog"){
+      headerClass = "header_blog";
+    }
+    else if (this.state.scrollY != 0){
+      headerClass = "header_wide";
+    }
+    else{
+      headerClass = "header_wide_down";
+    }
+
+    header =
+    <header className= {headerClass}>
+      <div className="header_container">
+        <h1>Spring Nguyen |</h1>
+        <h4>Technical Artist and Software Engineer</h4>
       </div>
+      {pageDirectories}
     </header>;
+
+    if (this.state.page == "Blog"){
+      header =
+      <header className={headerClass}>
+        <div className="header_container">
+          <h1>Spring Nguyen |</h1>
+          <h4>Technical Artist and Software Engineer</h4>
+        </div>
+        <div className="header_container">
+          <button onClick={(e) => this.changePage("Home", e)}><h2>Home</h2></button>
+          <a href="https://twitter.com/realmandarker"><img src={twitter}></img></a>
+          <a href="https://www.linkedin.com/in/springn/"><img src={linkedin}></img></a>
+        </div>
+      </header>;
+    }
 
     let content;
     let page;

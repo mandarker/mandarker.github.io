@@ -1,8 +1,8 @@
 import React from 'react';
 import '.././master.css';
 
-import colormancy1Preview from '../../previewVideos/colormancy1.mp4';
-import colormancyPainting from '../../images/colormancy.png';
+import colormancy1Preview from '../../videos/blogVideos/colormancy1.mp4';
+import colormancyPainting from '../../images/blogImages/colormancy.png';
 import colormancyVideo from '../../videos/colormancyspellattack.mp4';
 
 class Colormancy extends React.Component {
