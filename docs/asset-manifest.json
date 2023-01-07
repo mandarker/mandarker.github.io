@@ -1,25 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.8d186bf0.css",
-    "main.js": "/static/js/main.fcb4d735.js",
-    "static/media/IAIDOBuild.zip": "/static/media/IAIDOBuild.3e644bc066fa29c857c7.zip",
-    "static/media/NijitoDemoBuild.zip": "/static/media/NijitoDemoBuild.601de6d4f30f656e2ced.zip",
-    "static/media/ColormancyDemoBuild.zip": "/static/media/ColormancyDemoBuild.c85acd5c2d0e0d2c36ac.zip",
-    "static/media/IAIDOShort.mp4": "/static/media/IAIDOShort.c51b3263ca5ed2257820.mp4",
+    "main.js": "/static/js/main.1a7f1cec.js",
     "static/media/pikachu.mp4": "/static/media/pikachu.8dfd85b41aa57b228504.mp4",
-    "static/media/MetatopeShort.mp4": "/static/media/MetatopeShort.050f98ca97dc024988e1.mp4",
     "static/media/synthwave.mp4": "/static/media/synthwave.b1bf29ca1a9b1fd73f06.mp4",
-    "static/media/NijitoShort.mp4": "/static/media/NijitoShort.c97e269db0c4dc88481d.mp4",
     "static/media/water.mp4": "/static/media/water.39d64df6a05a27d27f4a.mp4",
     "static/media/iaido.mp4": "/static/media/iaido.d722cb535c141d493a76.mp4",
     "static/media/voidblock.mp4": "/static/media/voidblock.970a7001e6c28a608ac8.mp4",
-    "static/media/ZoologistShort.mp4": "/static/media/ZoologistShort.3b62531a2cc119b46ca4.mp4",
     "static/media/shield.mp4": "/static/media/shield.a5a7c1d96f7e4b3b1dc2.mp4",
     "static/media/arrowshot.mp4": "/static/media/arrowshot.122562cdd1f3aec19747.mp4",
     "static/media/colormancy1.mp4": "/static/media/colormancy1.956f781907fda5d422ad.mp4",
     "static/media/curveeditorv2.mp4": "/static/media/curveeditorv2.2d146143d0bdad763a96.mp4",
     "static/media/synthwavejitter.mp4": "/static/media/synthwavejitter.8c44aec54ac56f90e187.mp4",
-    "static/media/ColormancyShort.mp4": "/static/media/ColormancyShort.308d064a1ffb733f8711.mp4",
     "static/media/iaidoComplete.png": "/static/media/iaidoComplete.3aeae5403e5cd0af6cfe.png",
     "static/media/curveeditor.mp4": "/static/media/curveeditor.3d077b9e32f964252c58.mp4",
     "static/media/colormancy.png": "/static/media/colormancy.0f4248e0f6dacfe7f175.png",
@@ -35,10 +27,10 @@
     "index.html": "/index.html",
     "static/media/download.svg": "/static/media/download.6c76fab14d453c61faa2d942723a8959.svg",
     "main.8d186bf0.css.map": "/static/css/main.8d186bf0.css.map",
-    "main.fcb4d735.js.map": "/static/js/main.fcb4d735.js.map"
+    "main.1a7f1cec.js.map": "/static/js/main.1a7f1cec.js.map"
   },
   "entrypoints": [
     "static/css/main.8d186bf0.css",
-    "static/js/main.fcb4d735.js"
+    "static/js/main.1a7f1cec.js"
   ]
 }

@@ -43,17 +43,17 @@ class Home extends React.Component {
                   </div>
                   <div className="portfolioLinks">
                     { 
-                      download !== "" ? <a href={download} download>
-                        <button>Download <img src={downloadSVG}></img></button>
+                      download !== "" ? <a href={download} target="_blank">
+                        <button>Download <img src={externalLinkSVG}></img></button>
                         </a> : <></>
                     }
                     {
-                      link !== "" ? <a href={link}>
+                      link !== "" ? <a href={link} target="_blank">
                         <button>Website <img src={externalLinkSVG}></img></button>
                         </a> : <></>
                     }
                     {
-                      blog !== "" ? <a href={blog}>
+                      blog !== "" ? <a href={blog} target="_blank">
                         <button>Blog Post <img src={externalLinkSVG}></img></button>
                         </a> : <></>
                     }
