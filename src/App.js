@@ -60,6 +60,16 @@ class App extends React.Component {
         });
       }
     }
+    else
+    {
+      window.scrollTo({
+        behavior: "smooth",
+        left: 0,
+        top: 0
+      });
+
+      console.log("what");
+    }
   }
 
   render() {
@@ -109,15 +119,10 @@ class App extends React.Component {
 
     if (this.state.page == "Blog"){
       header =
-      <header className={headerClass}>
+      <header className={headerClass} onClick={(e) => this.changePage("Home", e)}>
         <div className="header_container">
           <h1>Spring Nguyen |</h1>
           <h4>Technical Artist and Software Engineer</h4>
-        </div>
-        <div className="header_container">
-          <button onClick={(e) => this.changePage("Home", e)}><h2>Home</h2></button>
-          <a href="https://twitter.com/realmandarker"><img src={twitter}></img></a>
-          <a href="https://www.linkedin.com/in/springn/"><img src={linkedin}></img></a>
         </div>
       </header>;
     }
@@ -133,7 +138,7 @@ class App extends React.Component {
         page = <Home refList={this.refList} changePage={this.changePage}/>;
         break;
       case 'Blog':
-        page = <Blog />;
+        page = <Blog refList={this.refList} changePage={this.changePage}/>;
         break;
     }
 

@@ -340,7 +340,7 @@ body {
 }
 /*#endregion about*/
 
-@media (max-width: 1000px) {
+@media (max-aspect-ratio: 7/5) {/*max-width: 1000px*/
   .landing_text {
     bottom: 85vh;
   }
@@ -431,7 +431,8 @@ body {
   }
 }
 
-@media (max-width: 550px) {
+
+@media (max-aspect-ratio: 4/5) {
   .portfolio {
     height: 450vh;
   }
@@ -475,8 +476,8 @@ body {
   }
 
   .about p {
-    font-size: 3vmax;
-    line-height: 4vmax;
+    font-size: 2.5vmax;
+    line-height: 3.5vmax;
   }
 
   .about_resume button {
