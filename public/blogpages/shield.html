@@ -5,33 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Spring Nguyen | Shield Shader</title>
     <link href="https://fonts.googleapis.com/css2?family=Caladea&family=Red+Hat+Display&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="master.css">
+    <link rel="stylesheet" type="text/css" href="../blogStyleSheet.css">
   </head>
   <body>
-    <div class="nav">
-      <a href="/../index.html"><h3>Spring Nguyen</h3></a>
-      <div class="socials">
-        <a href="https://twitter.com/realmandarker"><img src="./static/media/twitter.e18ebba4.png"></img></a>
-        <a href="https://www.linkedin.com/in/springn/"><img src="./static/media/linkedin.cbf63eb3.png"></img></a>
-      </div>
-    </div>
     <div class="contents">
+      <a href="../blog.html"><h4>&#60; Back to Blogs</h4></a>
       <h1>Shield Shader</h1>
-      <video loop autoplay muted src="./blogVideos/shield.mp4"></video>
+      <video loop autoplay muted src="../blogVideos/shield.mp4"></video>
       <h2>First step into post processing.</h2>
       <p>This project was aimed towards making my custom post processing effects, starting with bloom and high dynamic range (HDR).
         Working with the HDR meant I needed to be more careful with which color values went above 1, as they would be affected by the bloom.</p>
-      <img src="./blogImages/shieldhighbloom.png">
+      <img src="../blogImages/shieldhighbloom.png">
       <h2>The result of having too much bloom by setting the bloom threshold low.</h2>
       <p>The custom bloom I made uses downsampling and upsampling on 2x2 squares of pixels.
         While it may be simple, it is good enough to get the job done.
         The drawback is that the bloom is resolution dependent and does not work as well when looked at from further away.</p>
-      <img src="./blogImages/shieldbloomfar.png">
+      <img src="../blogImages/shieldbloomfar.png">
       <h2>Slight inaccuracy when looking from afar.</h2>
       <p>Part of this inaccuracy lies within the lack of antialiasing, which means isolated and missing pixels are affected.</p>
       <p>A challenge I found was working with generating the shield using Perlin noise.
         If I had mapped a Perlin texture normally onto the sphere, the texture would look wrong.</p>
-      <img src="./blogImages/shieldperlintex.png">
+      <img src="../blogImages/shieldperlintex.png">
       <h2>Odd stretching near top of the shield, and clipping where the texture wraps.</h2>
       <p>I thought of two solutions. One was to make a Perlin texture that wrapped vertically and horizontally.
         This solves the clipping issue, but it does not solve the stretching.

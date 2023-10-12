@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 
 import Home from './pages/Home'
-import Blog from './pages/Blog'
 
 import twitter from './images/smicons/twitter.png';
 import linkedin from './images/smicons/linkedin.png';
@@ -90,7 +89,7 @@ class App extends React.Component {
         <button onClick={(e) => this.changePage("Home", e)}><h2>Home</h2></button>
         <button onClick={(e) => this.changePage("Portfolio", e)}><h2>Portfolio</h2></button>
         <button onClick={(e) => this.changePage("About", e)}><h2>About</h2></button>
-        <button onClick={(e) => this.changePage("Blog", e)}><h2>Blog</h2></button>
+        <button><h2><a href="blog.html">Blog</a></h2></button>
         <a href="https://twitter.com/realmandarker"><img src={twitter}></img></a>
         <a href="https://www.linkedin.com/in/springn/"><img src={linkedin}></img></a>
       </div>;
@@ -136,9 +135,6 @@ class App extends React.Component {
       case 'Portfolio':
       case 'About':
         page = <Home refList={this.refList} changePage={this.changePage}/>;
-        break;
-      case 'Blog':
-        page = <Blog refList={this.refList} changePage={this.changePage}/>;
         break;
     }
 

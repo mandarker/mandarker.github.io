@@ -78,7 +78,7 @@ class Home extends React.Component {
               adapt to different roles. I am currently based in Los Angeles, California, but I can excel in remote opportunities!
             </p>
             <p>In my spare time, I work on smaller projects. 
-                The details of these projects can be found in my <a onClick={(e) => this.props.changePage("Blog", e)}>blog.</a>
+                The details of these projects can be found in my <a href='blog.html'>blog.</a>
             </p>
             <div className="about_resume">
               <a href={resume} download>
