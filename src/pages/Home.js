@@ -25,7 +25,7 @@ class Home extends React.Component {
           <video src={homeVideo} autoPlay loop muted type="video/mp4"></video>
           <div className="landing_text">
             <h1>Spring Nguyen</h1>
-            <h2>Technical Artist and Software Engineer</h2>
+            <h2>Software Engineer and Technical Artist</h2>
             <p>Welcome to my website! Here, I compile and detail my work and projects exploring different technologies, <br /> mainly within real-time rendering.</p>
             <button onClick={(e) => this.props.changePage("Portfolio", e)}>scroll down to advance <br />&#9947;</button>
           </div>
@@ -44,7 +44,7 @@ class Home extends React.Component {
                   <div className="portfolioLinks">
                     { 
                       download !== "" ? <a href={download} target="_blank">
-                        <button>Download <img src={externalLinkSVG}></img></button>
+                        <button>Download <img src={downloadSVG}></img></button>
                         </a> : <></>
                     }
                     {
@@ -67,13 +67,12 @@ class Home extends React.Component {
           <img src={profile}></img>
           <div className="about_text">
             <h1>About Me</h1>
-            <p>Hey there! My name is Spring, and I'm a software engineer and technical artist with a passion for realtime rendering.
-                I graduated from the University of California, Irvine as a Computer Game Science Bachelor of Science. 
+            <p>Hello! My name is Spring, and I'm a software engineer and technical artist with a passion for realtime rendering.
             </p>
             <p>I enjoy creating shaders, VFX, and editing tools. I also love working with unfamiliar technologies 
               and libraries. However, my passion lies in working on anything related to computer graphics. 
-              I currently work in AR, making full body motion tracking accessible on modern smartphones. 
-              I also lead the engineering team at Reality Check Games LLC.
+              I have worked at the forefront of AR, making full body motion tracking accessible on modern smartphones. 
+              Currently, I lead the engineering team at Reality Check Games LLC.
             </p>
             <p>I love cooperating with multidisciplinary teammates, but I am also a motivated self-starter that can
               adapt to different roles. I am currently based in Los Angeles, California, but I can excel in remote opportunities!

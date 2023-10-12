@@ -112,7 +112,7 @@ class App extends React.Component {
     <header className= {headerClass}>
       <div className="header_container">
         <h1>Spring Nguyen |</h1>
-        <h4>Technical Artist and Software Engineer</h4>
+        <h4>Software Engineer and Technical Artist</h4>
       </div>
       {pageDirectories}
     </header>;

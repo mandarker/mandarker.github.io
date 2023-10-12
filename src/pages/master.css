@@ -83,7 +83,7 @@ body {
 
 /*#region portfolio*/
 .portfolio {
-  height: 140vh;
+  height: 100vh;
   background-color: white;
 }
 
@@ -93,6 +93,7 @@ body {
   width: 100vw;
 
   text-align: center;
+  font-size: 2.5em;
 
   font-family:'Caladea';
   color:black;
@@ -101,7 +102,7 @@ body {
 
 .portfolioContainer {
   height: 80vh;
-  width: 90vw;
+  width: 95vw;
   
   margin-top: 8vh;
   margin-left: auto;
@@ -113,13 +114,13 @@ body {
 }
 
 .portfolioBlock {
-  width: 43vw;
-  height: 38vh;
+  width: 29vw;
+  height: 28vh;
 
   margin-right: 1vw;
   margin-left: 1vw;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
 
   border-radius: 20px;
 
@@ -168,13 +169,13 @@ body {
 
   text-align: center;
   text-decoration: underline;
-  font-size: 1.4vmax;
+  font-size: 1.3vmax;
 
   font-family: 'Red Hat Display';
 }
 
 .portfolioText p {
-  font-size: 1.1vmax;
+  font-size: 0.9vmax;
 
   color: white;
 
@@ -202,7 +203,7 @@ body {
 }
 
 .portfolioContent a{
-  width: 45%;
+  width: 68%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 8%;
@@ -251,8 +252,8 @@ body {
 }
 
 .about img {
-  height: 50vh;
-  width: 50vh;
+  height: 35vh;
+  width: 35vh;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -260,6 +261,7 @@ body {
 .about_text h1{
   font-family: 'Caladea';
   text-decoration: underline;
+  font-size: 2.5em;
 }
 
 .about_text p, .about_text h1 {
@@ -346,11 +348,11 @@ body {
   }
 
   .landing_text h1 {
-    font-size: 8vmax;
+    font-size: 7vmax;
   }
 
   .landing_text h2 {
-    font-size: 3vmax;
+    font-size: 2.5vmax;
   }
   
   .landing_text p {
@@ -434,7 +436,7 @@ body {
 
 @media (max-aspect-ratio: 4/5) {
   .portfolio {
-    height: 450vh;
+    height: 505vh;
   }
   
   .portfolioBlock {
