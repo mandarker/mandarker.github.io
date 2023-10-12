@@ -5,37 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Spring Nguyen | Pikachu Shader</title>
     <link href="https://fonts.googleapis.com/css2?family=Caladea&family=Red+Hat+Display&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="master.css">
+    <link rel="stylesheet" type="text/css" href="../blogStyleSheet.css">
   </head>
   <body>
-    <div class="nav">
-      <h3>Spring Nguyen</h3>
-      <div class="socials">
-        <a href="https://twitter.com/realmandarker"><img src="./static/media/twitter.e18ebba4.png"></img></a>
-        <a href="https://www.linkedin.com/in/springn/"><img src="./static/media/linkedin.cbf63eb3.png"></img></a>
-      </div>
-      <a href="index.html"><h4>Home</h4></a>
-      <a href="shield.html"><h4>Shield Shader</h4></a>
-      <a href="water.html"><h4>Water Shader</h4></a>
-      <a href="voidblock.html"><h4>Void Block Shader</h4></a>
-      <a href="arrowshot.html"><h4>Arrow Shot</h4></a>
-    </div>
     <div class="contents">
+      <a href="../blog.html"><h4>&#60; Back to Blogs</h4></a>
       <h1>Pikachu Shader</h1>
-      <video loop autoplay muted src="./static/media/pikachu.ffea52a0.mp4"></video>
+      <video loop autoplay muted src="../blogVideos/pikachu.mp4"></video>
       <h2>Based on the style of Pokemon Mystery Dungeon DX.</h2>
       <p>This shader was my first attempt to replicate the graphics of another game.</p>
       <p>For this project, I used Shader Graph, a node based shader integrated into the Unity engine.
         I had been learning the ropes of shader graph, and I thought it would be a good idea to try using it to replicate an existing game's lighting style.</p>
       <p>The result was surprisingly simple, yet a little lackluster.</p>
-      <img src="./images/pikachugraph.png">
+      <img src="../blogImages/pikachugraph.png">
       <h2>The amount of nodes needed to get a similar effect was smaller than expected.</h2>
       <p>Combining perlin noise and fresnel lighting created a crayon-like texture while highlighting the edges.
         Darker lighting makes the crayon texture more prominent. </p>
       <p>Despite successfully replicating these two properties, shader graph's simplicity removes any ability to create custom post processing effects.
         This includes an outline effect, which I substituted with a fresnel node.
         However, it became clear that this replacement was not enough.</p>
-      <img src="./images/pikachufresnel.png">
+      <img src="../blogImages/pikachufresnel.png">
       <h2>Dark spots on tail resulting from normal based outline.</h2>
       <p>The outline method I chose only works on rounded objects, but even so, it still creates inconsistent outline width.
         I will likely retry the project again in the future to iron out these kinks.</p>
