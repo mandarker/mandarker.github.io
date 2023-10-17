@@ -202,6 +202,22 @@ body {
   transition-duration: 500ms;
 }
 
+.portfolioPlayStore{
+  border-radius: 10px;
+
+  margin-bottom: 4%;
+
+  height: 60px;
+  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolioPlayStore img{
+  height: 100%;
+  filter: none;
+}
+
 .portfolioContent a{
   width: 68%;
   margin-left: auto;

@@ -33,7 +33,7 @@ class Home extends React.Component {
         <div className="portfolio" ref={this.props.refList.portfolioRef}>
           <h1>My Portfolio</h1>
           <div className="portfolioContainer">
-            {portfolioProjects.map(({id, title, vidsrc, desc, download, link, blog}) =>
+            {portfolioProjects.map(({id, title, vidsrc, desc, download, link, blog, playstore}) =>
               <div className="portfolioBlock">
                 <video muted src={vidsrc} autoPlay loop disablePictureInPicture controlsList='nodownload'></video>
                 <div className="portfolioContent">
@@ -56,6 +56,13 @@ class Home extends React.Component {
                       blog !== "" ? <a href={blog} target="_blank">
                         <button>Blog Post <img src={externalLinkSVG}></img></button>
                         </a> : <></>
+                    }
+                    {
+                      playstore !== "" ? 
+                      <div className='portfolioPlayStore'>
+                      <a href={playstore} target="_blank">
+                        <img alt='Get it on Google Play' src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"></img>
+                        </a></div> : <></>
                     }
                   </div>
                 </div>
